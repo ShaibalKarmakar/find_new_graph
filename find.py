@@ -112,7 +112,7 @@ if __name__ == "__main__":
         num_vertices = len(vertices)
         if num_vertices>7 and num_vertices not in arr.keys():
             arr[num_vertices] = [edges.copy()]
-        else:
+        elif num_vertices>7:
             arr[num_vertices].append(edges.copy())
         
         with open("data.pkl", "wb") as fp:
