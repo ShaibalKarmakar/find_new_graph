@@ -89,8 +89,8 @@ if __name__ == "__main__":
     etype = ['no_edge', ['type1'],['type1', 'type2']]
     arr = {}
     while(True):
-        N = np.random.choice(range(10, 21))
-        p_ = np.random.uniform(0,1)
+        N = np.random.choice(range(20,41))
+        p_ = np.random.uniform(0,1) 
         flag = True
         while flag:
             q_ = np.random.uniform(0,p_)
@@ -110,9 +110,9 @@ if __name__ == "__main__":
         subgraphs = get_subgraphs(parent)
         _, vertices = get_intersection(subgraphs)
         num_vertices = len(vertices)
-        if num_vertices>7 and num_vertices not in arr.keys():
+        if num_vertices>8 and num_vertices not in arr.keys():
             arr[num_vertices] = [edges.copy()]
-        elif num_vertices>7:
+        elif num_vertices>8:
             arr[num_vertices].append(edges.copy())
         
         with open("data.pkl", "wb") as fp:
